@@ -44,7 +44,7 @@ public class login extends HttpServlet {
                
                if(rs.next())
                {
-                   out.println("row exis");
+                   out.println("row ex"); 
                }
                else
                {
