@@ -60,13 +60,15 @@ public class reg extends HttpServlet {
                 String msg=" ";
                  if(i>0){  
                     msg="Record has been inserted";
-                 out.println("<font size='6' color=blue>" + msg + "</font>");  
+                 out.println("<font size='6' color=blue><center>" + msg + "</font>");
+                 out.println("<a href=\"login.html\">LOGIN</a><center>");
 
 
                 }  
                  else{  
                     msg="failed to insert the data";
                     out.println("<font size='6' color=blue>" + msg + "</font>");
+                    out.println("<a href=\"reg.html\">Try Again</a><center>");
                 }  
                 pst.close();
        

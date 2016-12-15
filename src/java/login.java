@@ -41,14 +41,17 @@ public class login extends HttpServlet {
                 Statement st=con.createStatement();
                ResultSet rs=st.executeQuery("select * from registration where username=\""+user+"\" and password=\""+pwd+"\"");
                
-               
+               String msg=" ";
                if(rs.next())
                {
-                   out.println("row ex"); 
-               }
+                   msg="Login Sucessfully";
+                   out.println("<font size='6' color=blue><center>" + msg + "</font></center>");
+                }
                else
                {
-                   out.println("row does not exis");
+                   msg="Login Unsucessfull";
+                   out.println("<font size='6' color=blue><center>" + msg + "</font>");
+                   out.println("<a href=\"login.html\">Try Again</a><center>");
                }
                }
             
